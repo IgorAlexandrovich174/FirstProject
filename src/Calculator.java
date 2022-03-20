@@ -6,6 +6,7 @@ public class Calculator {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите числа : ");
         String inputValues = input.nextLine();
+        System.out.println(inputValues);
 
     }
 }
