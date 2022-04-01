@@ -1,7 +1,6 @@
-import java.io.IOException;
 
 public class ParsingInput {
-    public DistributionOfValues parsingStr(String inputValues) {
+    public DistributionOfValues parsingStr(String inputValues) throws Exception {
 
         Integer indexOperator = null;
         String operator = null;
@@ -32,7 +31,7 @@ public class ParsingInput {
 
             }
         if (indexOperator == null){
-            System.out.println("Вы не ввели оператор!");
+            throw new Exception("Вы не ввели оператор!");
         }
         String firstNumber = inputValues.substring(0, indexOperator);
         String secondNumber = inputValues.substring(indexOperator + 1);

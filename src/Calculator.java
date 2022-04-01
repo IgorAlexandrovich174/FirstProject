@@ -14,8 +14,27 @@ public class Calculator {
         ParsingInput parsingInput = new ParsingInput();
         DistributionOfValues values = parsingInput.parsingStr(inputValues);
 
-        int firstNumber = Integer.parseInt(values.getFirstNumber());
-        int secondNumber = Integer.parseInt(values.getSecondNumber());
+        RomanNumbers romNumbers = new RomanNumbers();
+
+        boolean firstRomanNumber = romNumbers.checkRomanNumber(values.getFirstNumber());
+        boolean secondRomanNumber = romNumbers.checkRomanNumber(values.getSecondNumber());
+
+        int firstNumber;
+        int secondNumber;
+
+        if (firstRomanNumber && !secondRomanNumber){
+            throw new Exception("Второе число не римское!");
+        }
+        if (!firstRomanNumber && secondRomanNumber){
+            throw new Exception("Первое число не римское!");
+        }
+        if (firstRomanNumber){
+        firstNumber = romNumbers.romanConvert(values.getFirstNumber());
+        secondNumber = romNumbers.romanConvert(values.getFirstNumber());
+        }else {
+            firstNumber = Integer.parseInt(values.getFirstNumber());
+            secondNumber = Integer.parseInt(values.getSecondNumber());
+        }
 
         if (firstNumber > 10 && secondNumber > 10){
             throw new Exception("Оба числа больше недопустимы!Вводите числа не больше десяти!");
