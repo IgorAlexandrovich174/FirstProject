@@ -1,4 +1,6 @@
-public class RomanNumbers {
+package ru.igor.calculator;
+
+public class RomanNumbersService {
 
     public String[] romanNumbers = {"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"};
 

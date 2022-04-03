@@ -1,19 +1,21 @@
-public class DistributionOfValues {
-    private String firstNumber;
-    private String secondNumber;
+package ru.igor.calculator;
+
+public class ParseResult {
+    private Integer firstNumber;
+    private Integer secondNumber;
     private String operator;
 
-    DistributionOfValues(String firstNumber, String secondNumber, String operator) {
+    public ParseResult(Integer firstNumber, Integer secondNumber, String operator) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
         this.operator = operator;
     }
 
-    public String getFirstNumber() {
+    public Integer getFirstNumber() {
         return firstNumber;
     }
 
-    public String getSecondNumber() {
+    public Integer getSecondNumber() {
         return secondNumber;
     }
 
