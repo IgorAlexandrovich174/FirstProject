@@ -64,5 +64,6 @@ public class InputParser {
 
         return new ParseResult(firstNumber, secondNumber, operator);
     }
+
 }
 

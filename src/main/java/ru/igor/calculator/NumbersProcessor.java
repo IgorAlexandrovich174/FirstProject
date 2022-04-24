@@ -11,5 +11,6 @@ public class NumbersProcessor {
             case "/" -> parseResult.getFirstNumber() / parseResult.getSecondNumber();
             default -> throw new Exception();
         };
+
     }
 }

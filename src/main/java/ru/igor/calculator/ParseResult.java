@@ -11,9 +11,7 @@ public class ParseResult {
         this.operator = operator;
     }
 
-    public Integer getFirstNumber() {
-        return firstNumber;
-    }
+    public Integer getFirstNumber() { return firstNumber; }
 
     public Integer getSecondNumber() {
         return secondNumber;
